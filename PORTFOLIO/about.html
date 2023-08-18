@@ -1,0 +1,72 @@
+<!--------- ABOUT ------------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9a02bf5a64.js" crossorigin="anonymous"></script>
+</head>
+<div id="about">
+    <div class="container">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/experience.html">Experience</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills/Certification</a></li>
+                <li><a href="/contact.html">Contact Details</a></li>
+        </ul>   
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/hi.png">
+            </div> 
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A budding engineer with strong troubleshooting and problem solving mindset and a keen interest in software development and firmware design. Fluent in English with excellent confidence, communication, interpersonal and reporting skills. A quick learner with strong time management and multi-tasking ability. Strong work ethic in team or individual settings to drive product success and process efficiency.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Langauge Proficiency')">Langauge Proficiency</p>
+                    <p class="tab-links" onclick="opentab('Achievements')">Achievements</p>                    
+                </div>
+                <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li><span>St. Joseph's Convent School</span><br>(2005 - 2017)<br>95.84%</li>
+                        <li><span>SBR PU College</span> <br> (2017 - 2019)<br>86.33%</li>
+                        <li><span>Bangalore Institute of Technology</span> <br>(2019 - 2023)<br>8.93 CGPA</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Langauge Proficiency">
+                    <ul>
+                        <li><span>English | Kannada | Hindi</span><br>Proficient</li>
+                        <li><span>German</span><br>Conversational</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Achievements">
+                        <ul>
+                            <li>Rotaract Club of B.I.T. <br><br><span>Joint Secretary</span><br>(2021 - 22)<br><SPan>Community Service Director </SPan><br>(2020 - 21) <br><span>Student Volunteer</span><br>(2019 - 20)</li>
+                            <li>IEDC B.I.T. <br><br><span>Vice President of Operations</span><br>(2022 - 23)<br><SPan>Social Media Coordinator </SPan><br>(2021 - 22) <br><span>Student Coordinator</span><br>(2019 - 21)</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
